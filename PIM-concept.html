@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="toggle-tabs.js"></script>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+</head>
+<style> 
+
+.panel-heading {
+    padding: 0
+}
+.panel-heading a {
+    display: block;
+    padding: 20px 10px;
+}
+.panel-heading a.collapsed {
+    background: #fff
+}
+.panel-heading a {
+    background: #f7f7f7;
+    border-radius: 5px;
+}
+.panel-heading a:after {
+    content: '-'
+}
+.panel-heading a.collapsed:after {
+    content: '+'
+}
+.nav.nav-tabs li a,
+.nav.nav-tabs li.active > a:hover,
+.nav.nav-tabs li.active > a:active,
+.nav.nav-tabs li.active > a:focus {
+    border-bottom-width: 0px;
+    outline: none;
+}
+.nav.nav-tabs li a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.tab-pane {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+}
+
+
+
+/* used for sidebar tab/collapse*/
+@media (max-width: 991px) {
+  .visible-tabs {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .visible-tabs {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .hidden-tabs {
+    display: none !important;
+  }
+}
+</style>
+<body> 
+<section class="first-section">
+
+	<div class="col-sm-7">
+	   <p class="first-heading-info"> Naam van de app </p> 
+	</div>
+	<div class="col-sm-5"> 
+       <input type="text" placeholder="Search.."> 
+    </div>
+
+</section>
+<section class="second-section">
+
+	<div class="col-sm-6" data-spy="affix" data-offset-top="197">
+        <img class="voorbeeld_img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg/1200px-The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg" alt="De Nachtwacht" style="max-width: 80%;"/>
+		<h1 class="header-general-info"> Algemene informatie </h1>
+		<p class="informatie-blok"> Hier komt algemene informatie over het kunstwerk </p> 
+	</div>
+
+	<div class="col-sm-6">
+		<!--begin tabs going in narrow content -->
+               <ul class="nav nav-tabs sidebar-tabs" id="sidebar" role="tablist">
+                  <li class="active"><a href="#tab-1" role="tab" data-toggle="tab">Recent</a></li>
+                  <li><a href="#tab-2" role="tab" data-toggle="tab">Popular</a></li>
+                  <li><a href="#tab-3" role="tab" data-toggle="tab">Tags</a></li>
+               </ul><!--/.nav-tabs.sidebar-tabs -->
+               <!-- Tab panes -->
+               <div class="tab-content">
+                  <div class="tab-pane active" id="tab-1">
+                     <p>Recent content</p>
+                  </div><!--/.tab-pane -->
+                  <div class="tab-pane" id="tab-2">
+                     <p>Popular Content</p>
+                  </div><!--/.tab-pane -->
+                  <div class="tab-pane" id="tab-3">
+                     <p>Tag Content</p>
+                  </div><!--/.tab-pane -->
+               </div><!--/.tab-content -->
+              
+            </div> <!--/.col-sm-4 -->
+	</div>
+
+</section>
+
+</body>
